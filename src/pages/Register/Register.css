@@ -1,0 +1,52 @@
+.RegisterNav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+.RegisterNavLeft {
+  padding: 2rem;
+}
+.RegisterNavRight {
+  padding: 2.2rem;
+}
+.RegisterContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.RegisterInfo {
+  width: 70%;
+  height: 87%;
+}
+.RegisterText {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.RegisterText h1 {
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+.RegisterInput {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.RegisterInput p {
+  margin-left: -40px;
+  font-size: 1.2rem;
+}
+.RegisterInput input {
+  padding: 1rem 5rem;
+  margin-left: -40px;
+  margin-top: 2rem;
+}
+.RegisterInput button {
+  padding: 1rem 5rem;
+  margin-top: 2rem;
+  border: none;
+  background: red;
+  color: #fff;
+  border-radius: 4px;
+}
