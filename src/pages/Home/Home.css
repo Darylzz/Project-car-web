@@ -21,6 +21,44 @@ nav {
 .navRight {
   padding: 2.2rem;
 }
-.navRight Link {
+.HeaderBackground {
+  height: 700px;
+  background-image: url(../../asset/GTRHome.jpg);
+  background-size: cover;
+}
+.HeaderContentText {
+  text-align: center;
+  padding-top: 6rem;
+}
+.HeaderContentText h3 {
+  color: #fff;
+  font-size: 2rem;
+}
+.HeaderContentText p {
+  font-size: 1rem;
+  color: #fff;
+  padding-top: 1rem;
+}
+.HeaderContentInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
+}
+.HeaderContentInput input {
+  padding: 1rem 5rem;
+  margin-right: 1rem;
+  background-color: rgb(97, 97, 97);
+  color: #fff;
+  border: none;
+}
+::placeholder {
+  color: #fff;
+}
+.HeaderContentInput button {
+  padding: 1rem;
+  color: #fff;
+  background: red;
+  border: none;
+  border-radius: 2px;
 }
