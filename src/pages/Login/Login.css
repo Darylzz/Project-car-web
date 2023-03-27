@@ -9,3 +9,33 @@
 .LoginNavRight {
   padding: 2.2rem;
 }
+.LoginContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.LoginBox {
+  width: 80%;
+  height: 80%;
+  padding-top: 5rem;
+}
+.LoginFlex {
+  display: flex;
+  justify-content: center;
+}
+.LoginInput {
+  padding-top: 5rem;
+}
+.LoginInput input {
+  padding: 1rem 5rem;
+  margin: 1.5rem 0;
+}
+.LoginInput button {
+  padding: 1rem 7.6rem;
+  margin: 1.5rem 0;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}

@@ -22,7 +22,26 @@ export default function Login() {
           </Link>
         </div>
       </div>
-      <div className="LoginContainer"></div>
+      <div className="LoginContainer">
+        <div className="LoginBox">
+          <div className="LoginFlex">
+            <div className="LoginText">
+              <h1>กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบ</h1>
+            </div>
+          </div>
+          <div className="LoginInput">
+            <div className="LoginFlex">
+              <form>
+                <input type="email" placeholder="กรุณากรอกอีเมล" />
+                <br />
+                <input type="password" placeholder="กรุณากรอกรหัสผ่าน" />
+                <br />
+                <button>เข้าสู่ระบบ</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
