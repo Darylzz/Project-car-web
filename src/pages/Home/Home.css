@@ -129,3 +129,6 @@ footer {
   border: none;
   border-radius: 2px;
 }
+.FooterRegisterInput ::placeholder {
+  color: #fff;
+}
