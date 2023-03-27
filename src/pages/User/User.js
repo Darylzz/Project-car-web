@@ -1,6 +1,9 @@
 import "./User.css";
+import useAuth from "../../hook/useAuth";
 
 export default function User() {
+  const { logout } = useAuth();
+
   return (
     <>
       <div className="UserNav">
@@ -8,7 +11,7 @@ export default function User() {
           <h1>Project Car</h1>
         </div>
         <div className="UserNavRight">
-          <button>Logout</button>
+          <button onClick={logout}>Logout</button>
         </div>
       </div>
     </>
