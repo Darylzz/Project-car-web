@@ -28,21 +28,21 @@
   font-weight: bolder;
   font-size: 2.5rem;
 }
-.RegisterInput {
+.input {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
-.RegisterInput p {
+.input p {
   margin-left: -40px;
   font-size: 1.2rem;
 }
-.RegisterInput input {
+.input input {
   padding: 1rem 5rem;
   margin-left: -40px;
   margin-top: 2rem;
 }
-.RegisterInput button {
+.input button {
   padding: 1rem 5rem;
   margin-top: 2rem;
   border: none;
