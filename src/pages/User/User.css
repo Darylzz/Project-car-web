@@ -1,7 +1,7 @@
 .UserNav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #222;
 }
 .UserNavLeft {
   padding: 2rem;
@@ -15,4 +15,40 @@
   background: red;
   color: #fff;
   border-radius: 4px;
+}
+.UserContainer {
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+}
+.UserContent {
+  height: 500px;
+  width: 700px;
+  border: 1px solid red;
+}
+.UserFlex {
+  display: flex;
+  justify-content: center;
+}
+.UserCarImage img {
+  height: 200px;
+  width: 350px;
+  margin-top: 4rem;
+}
+.UserCarInfo {
+  padding-top: 3rem;
+}
+.UserCarInfo h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+.UserCarInfo button {
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  margin: 2rem 0 0 1.5rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background: red;
 }
