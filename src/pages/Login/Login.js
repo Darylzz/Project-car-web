@@ -1,27 +1,21 @@
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Login() {
+  const { login } = useAuth();
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const navigate = useNavigate();
-
-  const { login } = useAuth;
-
-  // const handleChangeLogin = e => {
-  //   setInput({ ...input, [e.target.name]: e.target.value });
-  // };
 
   const handleSubmitLoginForm = async e => {
     try {
       e.preventDefault();
       await login(inputEmail, inputPassword);
-      toast.success("Login success");
-      navigate("/");
+      toast.success("Success login");
     } catch (err) {
+      console.log(err);
       toast.error(err.response?.data.message);
     }
   };
