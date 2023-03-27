@@ -1,7 +1,25 @@
-import { Link } from "react-router-dom";
 import "./Login.css";
+import { Link } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Login() {
+  const { login } = useAuth();
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
+
+  const handleSubmitLoginForm = async e => {
+    try {
+      e.preventDefault();
+      await login(inputEmail, inputPassword);
+      toast.success("Success login");
+    } catch (err) {
+      console.log(err);
+      toast.error(err.response?.data.message);
+    }
+  };
+
   return (
     <>
       <div className="LoginNav">
@@ -31,10 +49,22 @@ export default function Login() {
           </div>
           <div className="LoginInput">
             <div className="LoginFlex">
-              <form>
-                <input type="email" placeholder="กรุณากรอกอีเมล" />
+              <form onSubmit={handleSubmitLoginForm}>
+                <input
+                  type="text"
+                  placeholder="กรุณากรอกอีเมล"
+                  name="email"
+                  value={inputEmail}
+                  onChange={e => setInputEmail(e.target.value)}
+                />
                 <br />
-                <input type="password" placeholder="กรุณากรอกรหัสผ่าน" />
+                <input
+                  type="password"
+                  placeholder="กรุณากรอกรหัสผ่าน"
+                  name="password"
+                  value={inputPassword}
+                  onChange={e => setInputPassword(e.target.value)}
+                />
                 <br />
                 <button>เข้าสู่ระบบ</button>
               </form>

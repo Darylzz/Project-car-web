@@ -7,7 +7,6 @@ export const AuthContext = createContext();
 
 export default function AuthContextProvider({ children }) {
   const [authenticatedUser, setAuthenticatedUser] = useState(getAccessToken() ? true : null);
-
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -21,18 +20,15 @@ export default function AuthContextProvider({ children }) {
       fetchUser();
     }
   }, []);
-
   const login = async (email, password) => {
-    const res = await authApi.login(email, password);
+    const res = await authApi.login({ email, password });
     setAccessToken(res.data.accessToken);
     setAuthenticatedUser(jwtDecode(res.data.accessToken));
   };
-
   const logout = () => {
     removeAccessToken();
     setAuthenticatedUser(null);
   };
-
   return (
     <AuthContext.Provider value={{ authenticatedUser, login, logout }}>
       {children}
