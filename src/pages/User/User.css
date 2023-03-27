@@ -8,6 +8,8 @@
 }
 .UserNavRight {
   padding: 2.3rem;
+  display: flex;
+  gap: 20px;
 }
 .UserNavRight button {
   padding: 0.5rem 1rem;

@@ -1,9 +1,13 @@
 import "./User.css";
 import useAuth from "../../hook/useAuth";
 import carGTR from "../../asset/GTR-R35.jpeg";
+import { useState } from "react";
+import Modal from "./Modal/Modal";
 
 export default function User() {
   const { logout } = useAuth();
+
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <>
@@ -12,6 +16,8 @@ export default function User() {
           <h1>Project Car</h1>
         </div>
         <div className="UserNavRight">
+          <button onClick={() => setOpenModal(true)}>เพิ่มรถของคุณ</button>
+          <Modal openModal={openModal} onClose={() => setOpenModal(false)} />
           <button onClick={logout}>Logout</button>
         </div>
       </div>
