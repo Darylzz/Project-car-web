@@ -1,0 +1,18 @@
+.UserNav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+}
+.UserNavLeft {
+  padding: 2rem;
+}
+.UserNavRight {
+  padding: 2.3rem;
+}
+.UserNavRight button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: red;
+  color: #fff;
+  border-radius: 4px;
+}

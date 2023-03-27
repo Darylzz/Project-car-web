@@ -22,9 +22,9 @@ export default function Home() {
                 border: "none",
                 borderRadius: "6px"
               }}
-              to="/"
+              to="/register"
             >
-              Home
+              Register
             </Link>
             <Link
               style={{
@@ -36,37 +36,9 @@ export default function Home() {
                 border: "none",
                 borderRadius: "6px"
               }}
-              to="/"
+              to="/login"
             >
-              Product
-            </Link>
-            <Link
-              style={{
-                padding: "0.5rem 1rem",
-                textDecoration: "none",
-                color: "#fff",
-                background: "red",
-                margin: "1rem",
-                border: "none",
-                borderRadius: "6px"
-              }}
-              to="/"
-            >
-              Wishlist
-            </Link>
-            <Link
-              style={{
-                padding: "0.5rem 1rem",
-                textDecoration: "none",
-                color: "#fff",
-                background: "red",
-                margin: "1rem",
-                border: "none",
-                borderRadius: "6px"
-              }}
-              to="/"
-            >
-              Profile
+              Login
             </Link>
           </div>
         </nav>
