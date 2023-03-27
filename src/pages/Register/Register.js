@@ -16,7 +16,7 @@ export default function Register() {
               fontSize: "1.5rem",
               fontWeight: "bold"
             }}
-            to="/"
+            to="/login"
           >
             เข้าสู่ระบบ
           </Link>
