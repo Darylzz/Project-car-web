@@ -17,6 +17,7 @@
   background: red;
   color: #fff;
   border-radius: 4px;
+  cursor: pointer;
 }
 .UserContainer {
   width: 100vw;
@@ -26,7 +27,6 @@
 .UserContent {
   height: 500px;
   width: 700px;
-  border: 1px solid red;
 }
 .UserFlex {
   display: flex;
@@ -53,4 +53,5 @@
   border-radius: 4px;
   color: #fff;
   background: red;
+  cursor: pointer;
 }
