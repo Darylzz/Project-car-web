@@ -45,6 +45,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
 .HeaderContentInput input {
   padding: 1rem 5rem;
@@ -114,6 +115,9 @@ footer {
   color: #fff;
   font-weight: bold;
   font-size: 1.5rem;
+}
+.FooterRegisterInput {
+  margin-top: 2rem;
 }
 .FooterRegisterInput input {
   padding: 1rem 5rem;
