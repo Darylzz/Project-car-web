@@ -56,6 +56,8 @@ export default function User() {
                     openManageModal={openManageModal}
                     onClose={() => setOpenManageModal(false)}
                     id={el.id}
+                    userId={authenticatedUser.id}
+                    CarUserId={el.userId}
                   />
                 </div>
               </div>
