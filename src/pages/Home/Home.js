@@ -49,8 +49,18 @@ export default function Home() {
           </div>
           <div className="HeaderContentInput">
             <form>
-              <input type="email" placeholder="กรุณากรอก E-mail" />
-              <button>เริ่มต้นใช้งาน</button>
+              <Link
+                style={{
+                  padding: "1rem 6rem",
+                  background: "red",
+                  textDecoration: "none",
+                  borderRadius: "4px",
+                  color: "#fff"
+                }}
+                to="/register"
+              >
+                เริ่มต้นใช้งาน
+              </Link>
             </form>
           </div>
         </div>
@@ -88,8 +98,18 @@ export default function Home() {
           </div>
           <div className="FooterRegisterInput">
             <form>
-              <input type="email" placeholder="กรุณากรอก E-mail" />
-              <button>เริ่มต้นใช้งาน</button>
+              <Link
+                style={{
+                  padding: "1rem 6rem",
+                  background: "red",
+                  textDecoration: "none",
+                  borderRadius: "4px",
+                  color: "#fff"
+                }}
+                to="/register"
+              >
+                เริ่มต้นใช้งาน
+              </Link>
             </form>
           </div>{" "}
         </footer>
