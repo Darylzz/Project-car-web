@@ -5,19 +5,21 @@ import Modal from "./Modal/Modal";
 import * as carApi from "../../api/carApi";
 
 export default function User() {
-  const { logout } = useAuth();
+  const { authenticatedUser, logout } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
   const [allUserCar, setAllUserCar] = useState([]);
 
   useEffect(() => {
     const fetchUserCar = async () => {
-      const res = await carApi.getAllUserCar();
-      // console.log(res.data.car);
+      const res = await carApi.getCarByUserId(authenticatedUser.id);
+      console.log(res.data.car);
       setAllUserCar(res.data.car);
     };
     fetchUserCar();
   }, []);
+
+  // console.log(authenticatedUser);
 
   return (
     <>
