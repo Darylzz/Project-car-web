@@ -1,0 +1,31 @@
+.UserModalContainer {
+  height: 80%;
+  width: 80%;
+  position: fixed;
+  background: #fff;
+  top: 10%;
+  left: 10%;
+}
+.UserModalBox button {
+  margin-left: 95%;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.UserModalText {
+  padding-left: 2rem;
+}
+.UserModalFlex {
+  display: flex;
+  justify-content: center;
+}
+.UserModalInput {
+  margin: 5rem 25rem 0 0;
+}
+.UserModalInput input {
+  padding: 0.5rem 3rem;
+  border-radius: 4px;
+}
+.UserModalInputButton {
+  display: flex;
+  margin: 20.4rem 6rem 0 0;
+}

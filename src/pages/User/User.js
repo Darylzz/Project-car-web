@@ -2,22 +2,26 @@ import "./User.css";
 import useAuth from "../../hook/useAuth";
 import { useEffect, useState } from "react";
 import Modal from "./Modal/Modal";
+import ManageModal from "./ManageModal/ManageModal";
 import * as carApi from "../../api/carApi";
 
 export default function User() {
   const { authenticatedUser, logout } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
+  const [openManageModal, setOpenManageModal] = useState(false);
   const [allUserCar, setAllUserCar] = useState([]);
 
   useEffect(() => {
     const fetchUserCar = async () => {
       const res = await carApi.getCarByUserId(authenticatedUser.id);
-      console.log(res.data.car);
+      // console.log(res.data.car);
       setAllUserCar(res.data.car);
     };
     fetchUserCar();
-  }, []);
+  }, [authenticatedUser.id]);
+
+  // console.log(allUserCar);
 
   // console.log(authenticatedUser);
 
@@ -47,7 +51,12 @@ export default function User() {
                   <h3>
                     Name: {el.brand} {el.model}
                   </h3>
-                  <button>กดเพื่อแก้ไขข้อมูล</button>
+                  <button onClick={() => setOpenManageModal(true)}>กดเพื่อแก้ไขข้อมูล</button>
+                  <ManageModal
+                    openManageModal={openManageModal}
+                    onClose={() => setOpenManageModal(false)}
+                    id={el.id}
+                  />
                 </div>
               </div>
             </div>
