@@ -1,13 +1,23 @@
 import "./User.css";
 import useAuth from "../../hook/useAuth";
-import carGTR from "../../asset/GTR-R35.jpeg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "./Modal/Modal";
+import * as carApi from "../../api/carApi";
 
 export default function User() {
   const { logout } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
+  const [allUserCar, setAllUserCar] = useState([]);
+
+  useEffect(() => {
+    const fetchUserCar = async () => {
+      const res = await carApi.getAllUserCar();
+      // console.log(res.data.car);
+      setAllUserCar(res.data.car);
+    };
+    fetchUserCar();
+  }, []);
 
   return (
     <>
@@ -22,21 +32,25 @@ export default function User() {
         </div>
       </div>
       <div className="UserContainer">
-        <div className="UserContent">
-          <div className="UserFlex">
-            <div className="UserCarImage">
-              <img src={carGTR} alt="" />
-            </div>
-          </div>
-          <div className="UserCarContent">
+        {allUserCar?.map(el => (
+          <div className="UserContent" key={el.id}>
             <div className="UserFlex">
-              <div className="UserCarInfo">
-                <h3>Name: GTR R35 Nismo</h3>
-                <button>กดเพื่ออ่านข้อมูล</button>
+              <div className="UserCarImage">
+                <img src={process.env.REACT_APP_URL + el.image} alt="" />
+              </div>
+            </div>
+            <div className="UserCarContent">
+              <div className="UserFlex">
+                <div className="UserCarInfo">
+                  <h3>
+                    Name: {el.brand} {el.model}
+                  </h3>
+                  <button>กดเพื่อแก้ไขข้อมูล</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </>
   );
