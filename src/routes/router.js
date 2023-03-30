@@ -8,14 +8,6 @@ import RedirectIfAuthenticate from "../auth/RedirectIfAuthenticate";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />
-  },
-  {
-    path: "/register",
-    element: <Register />
-  },
-  {
     path: "/login",
     element: (
       <RedirectIfAuthenticate>
@@ -30,6 +22,14 @@ const router = createBrowserRouter([
         <User />
       </ProtectedRoute>
     )
+  },
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/register",
+    element: <Register />
   }
 ]);
 
